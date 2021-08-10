@@ -9,8 +9,8 @@ public class MyFileRoute extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		
-		from("file:C:\\Training_Workspace\\input")
-			.to("file:C:\\Training_Workspace\\output");
+		from("{{my.app.source}}")
+			.to("{{my.app.destination}}");
 		
 	}
 
