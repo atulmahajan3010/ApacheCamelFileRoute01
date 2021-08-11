@@ -9,9 +9,14 @@ public class MyFileRoute extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		
-		from("{{my.app.source}}")
-			.to("{{my.app.destination}}");
+		consumeFile();
 		
+	}
+	
+	private void consumeFile() {
+		
+		from("{{my.app.source}}")
+		.to("{{my.app.destination}}");
 	}
 
 }
